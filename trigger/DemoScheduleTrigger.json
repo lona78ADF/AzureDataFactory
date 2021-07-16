@@ -1,0 +1,27 @@
+{
+	"name": "DemoScheduleTrigger",
+	"properties": {
+		"description": "Daily trigger",
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2020-10-17T17:24:00Z",
+				"endTime": "2020-10-31T17:24:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						0
+					],
+					"hours": [
+						10
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"name": "LInkedService_SqlServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"Dbname": {
+				"type": "string",
+				"defaultValue": "AdventureWorks"
+			},
+			"ServerName": {
+				"type": "string"
+			},
+			"UserName": {
+				"type": "string"
+			},
+			"Password": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=@{linkedService().ServerName};Initial Catalog=@{linkedService().Dbname};User ID=@{linkedService().UserName};Password=@{linkedService().Password}"
+		},
+		"connectVia": {
+			"referenceName": "IR-SelfHosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
